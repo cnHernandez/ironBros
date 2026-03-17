@@ -184,7 +184,7 @@ function ProductList({ onSelectProduct, selectedCategory, viewType, onSetFilter,
             </div>
           )}
       <div className="products-grid">
-        {productsToShow.map(product => (
+        {[...productsToShow].sort((a, b) => (a.price || 0) - (b.price || 0)).map(product => (
           <ProductCard
             key={product.id}
             product={product}
