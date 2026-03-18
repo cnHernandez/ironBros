@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Header from './components/Header'
 import Cart from './components/Cart'
 import ProductList from './components/ProductList'
@@ -526,6 +527,7 @@ function App() {
     >
       <img src={asset('images/iconWhat.png')} alt="WhatsApp" className="whatsapp-float__img" />
     </a>
+    <Analytics />
   </div>
  )
 }
